@@ -15,6 +15,12 @@
 		56D6EBAC2D0930B400CEB750 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6EBAB2D0930B400CEB750 /* SplashViewController.swift */; };
 		56D6EBAE2D09310900CEB750 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6EBAD2D09310900CEB750 /* SplashView.swift */; };
 		56D6EBB32D0949E400CEB750 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56D6EBB22D0949E400CEB750 /* Assets.xcassets */; };
+		56D6EBB62D094DA600CEB750 /* TipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6EBB52D094DA600CEB750 /* TipsView.swift */; };
+		56D6EBB92D09570D00CEB750 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6EBB82D09570D00CEB750 /* WelcomeView.swift */; };
+		56D6EBBB2D095C3200CEB750 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6EBBA2D095C3200CEB750 /* WelcomeViewController.swift */; };
+		56D6EBBE2D0A125A00CEB750 /* UiViewController+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6EBBD2D0A125A00CEB750 /* UiViewController+ext.swift */; };
+		56D6EBC02D0A16CE00CEB750 /* SplashFlowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6EBBF2D0A16CE00CEB750 /* SplashFlowDelegate.swift */; };
+		56D6EBC22D0A248500CEB750 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6EBC12D0A248400CEB750 /* Typography.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +34,12 @@
 		56D6EBAB2D0930B400CEB750 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		56D6EBAD2D09310900CEB750 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		56D6EBB22D0949E400CEB750 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		56D6EBB52D094DA600CEB750 /* TipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsView.swift; sourceTree = "<group>"; };
+		56D6EBB82D09570D00CEB750 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		56D6EBBA2D095C3200CEB750 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		56D6EBBD2D0A125A00CEB750 /* UiViewController+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiViewController+ext.swift"; sourceTree = "<group>"; };
+		56D6EBBF2D0A16CE00CEB750 /* SplashFlowDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashFlowDelegate.swift; sourceTree = "<group>"; };
+		56D6EBC12D0A248400CEB750 /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				56D6EBA42D09222B00CEB750 /* Colors.swift */,
+				56D6EBC12D0A248400CEB750 /* Typography.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -90,6 +103,8 @@
 		56D6EBA32D0921D400CEB750 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				56D6EBBC2D0A123C00CEB750 /* Extensions */,
+				56D6EBB42D094D9100CEB750 /* Components */,
 				56D6EBA92D09309000CEB750 /* Scenes */,
 				56D6EBA62D0922AE00CEB750 /* Coordinator */,
 			);
@@ -107,6 +122,7 @@
 		56D6EBA92D09309000CEB750 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				56D6EBB72D0956F300CEB750 /* WelcomeView */,
 				56D6EBAA2D09309D00CEB750 /* Splash */,
 			);
 			path = Scenes;
@@ -117,6 +133,7 @@
 			children = (
 				56D6EBAB2D0930B400CEB750 /* SplashViewController.swift */,
 				56D6EBAD2D09310900CEB750 /* SplashView.swift */,
+				56D6EBBF2D0A16CE00CEB750 /* SplashFlowDelegate.swift */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -127,6 +144,31 @@
 				56D6EBB22D0949E400CEB750 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		56D6EBB42D094D9100CEB750 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				56D6EBB52D094DA600CEB750 /* TipsView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		56D6EBB72D0956F300CEB750 /* WelcomeView */ = {
+			isa = PBXGroup;
+			children = (
+				56D6EBB82D09570D00CEB750 /* WelcomeView.swift */,
+				56D6EBBA2D095C3200CEB750 /* WelcomeViewController.swift */,
+			);
+			path = WelcomeView;
+			sourceTree = "<group>";
+		};
+		56D6EBBC2D0A123C00CEB750 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				56D6EBBD2D0A125A00CEB750 /* UiViewController+ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,11 +241,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56D6EBBB2D095C3200CEB750 /* WelcomeViewController.swift in Sources */,
 				56D6EB8C2D08EA4600CEB750 /* AppDelegate.swift in Sources */,
 				56D6EBA82D0922C200CEB750 /* NearbyFlowController.swift in Sources */,
 				56D6EBA52D09222B00CEB750 /* Colors.swift in Sources */,
+				56D6EBBE2D0A125A00CEB750 /* UiViewController+ext.swift in Sources */,
+				56D6EBB92D09570D00CEB750 /* WelcomeView.swift in Sources */,
 				56D6EB8E2D08EA4600CEB750 /* SceneDelegate.swift in Sources */,
+				56D6EBB62D094DA600CEB750 /* TipsView.swift in Sources */,
 				56D6EBAC2D0930B400CEB750 /* SplashViewController.swift in Sources */,
+				56D6EBC02D0A16CE00CEB750 /* SplashFlowDelegate.swift in Sources */,
+				56D6EBC22D0A248500CEB750 /* Typography.swift in Sources */,
 				56D6EBAE2D09310900CEB750 /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
