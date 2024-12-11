@@ -19,6 +19,8 @@ class WelcomeView: UIView {
     private let welcomeLabel: UILabel = {
         let label = UILabel()
         label.text = "Boas vindas ao Nearby!"
+        label.font = Typography.titleXL
+        label.textColor = Colors.gray600
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -26,13 +28,26 @@ class WelcomeView: UIView {
     private let descriptionLabel: UILabel = {
         let description = UILabel()
         description.text = "Tenha cupons de vantagem para usar em seus estabelecimentos favoritos."
+        description.font = Typography.textMD
+        description.textColor = Colors.gray500
+        description.numberOfLines = 0
         description.translatesAutoresizingMaskIntoConstraints = false
         return description
     }()
     
+    private let tipsLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Veja como funciona:"
+        label.font = Typography.textMD
+        label.textColor = Colors.gray500
+        label.numberOfLines = 0
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
     private let tipsStackView: UIStackView = {
         let stackView = UIStackView()
-        stackView.spacing = 16
+        stackView.spacing = 24
         stackView.axis = .vertical
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
@@ -41,9 +56,14 @@ class WelcomeView: UIView {
     private let startButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Começar", for: .normal)
+        button.titleLabel?.font = Typography.action
         button.backgroundColor = Colors.greenBase
         button.setTitleColor(Colors.gray100, for: .normal)
         button.layer.cornerRadius = 8
+        button.layer.shadowColor = UIColor(red: 23/255, green: 84/255, blue: 46/255, alpha: 1).cgColor
+        button.layer.shadowOffset = CGSize(width: 0, height: 15)
+        button.layer.shadowRadius = 10 // Blur
+        button.layer.shadowOpacity = 0.25
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -62,6 +82,7 @@ class WelcomeView: UIView {
         addSubview(logoImageView)
         addSubview(welcomeLabel)
         addSubview(descriptionLabel)
+        addSubview(tipsLabel)
         addSubview(tipsStackView)
         addSubview(startButton)
         
@@ -71,23 +92,27 @@ class WelcomeView: UIView {
     private func setupConstraints() {
         NSLayoutConstraint.activate([
             logoImageView.topAnchor.constraint(equalTo: topAnchor, constant: 16),
-            logoImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24),
+            logoImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
             logoImageView.widthAnchor.constraint(equalToConstant: 48),
             logoImageView.heightAnchor.constraint(equalToConstant: 48),
             
             welcomeLabel.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 24),
-            welcomeLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24),
+            welcomeLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
             
-            descriptionLabel.topAnchor.constraint(equalTo: welcomeLabel.bottomAnchor, constant: 8),
-            descriptionLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24),
+            descriptionLabel.topAnchor.constraint(equalTo: welcomeLabel.bottomAnchor, constant: 12),
+            descriptionLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
+            descriptionLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32),
             
-            tipsStackView.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 24),
-            tipsStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24),
-            tipsStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -24),
+            tipsLabel.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 40),
+            tipsLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
+            
+            tipsStackView.topAnchor.constraint(equalTo: tipsLabel.bottomAnchor, constant: 24),
+            tipsStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
+            tipsStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32),
             
             startButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -48),
-            startButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24),
-            startButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -24),
+            startButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
+            startButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32),
             startButton.heightAnchor.constraint(equalToConstant: 56)
         ])
     }
