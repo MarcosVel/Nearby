@@ -84,10 +84,10 @@ class PlaceTableViewCell: UITableViewCell {
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            containerView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
-            containerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
-            containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
-            containerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),
+            containerView.topAnchor.constraint(equalTo: topAnchor, constant: 8),
+            containerView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            containerView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            containerView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8),
             
             itemImageView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 8),
             itemImageView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 8),
@@ -113,23 +113,21 @@ class PlaceTableViewCell: UITableViewCell {
             ticketLabel.centerYAnchor.constraint(equalTo: ticketIcon.centerYAnchor),
             ticketLabel.leadingAnchor.constraint(equalTo: ticketIcon.trailingAnchor, constant: 4),
         ])
-        
-        func configure(with place: Place) {
-            if let url = URL(string: place.cover) {
-                URLSession.shared.dataTask(with: url) { data, _, _ in
-                    if let data = data, let image = UIImage(data: data) {
-                        DispatchQueue.main.async {
-                            self.itemImageView.image = image
-                        }
-                    }
-                }.resume()
-            }
-            
-            titleLabel.text = place.name
-            descriptionLabel.text = place.description
-            ticketLabel.text = "\(place.coupons) cupons disponíveis"
-        }
     }
     
-    
+    func configure(with place: Place) {
+        if let url = URL(string: place.cover) {
+            URLSession.shared.dataTask(with: url) { data, _, _ in
+                if let data = data, let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self.itemImageView.image = image
+                    }
+                }
+            }.resume()
+        }
+        
+        titleLabel.text = place.name
+        descriptionLabel.text = place.description
+        ticketLabel.text = "\(place.coupons) cupons disponíveis"
+    }
 }

@@ -18,7 +18,7 @@ class HomeViewModel {
     var didUpdateCategories: (() -> Void)?
     var didUpdatePlaces: (() -> Void)?
     
-    private func fetchInitialData(completion: @escaping ([Category]) -> Void) {
+    func fetchInitialData(completion: @escaping ([Category]) -> Void) {
         fetchCategories { categories in
             if let foodCategory = categories.first(where: { $0.name == "Alimentação" }) {
                 self.fetchPlaces(for: foodCategory.id, userLocation: CLLocationCoordinate2D(latitude: self.userLatitude, longitude: self.userLongitude))
@@ -26,7 +26,7 @@ class HomeViewModel {
         }
     }
     
-    private func fetchCategories(completion: @escaping ([Category]) -> Void) {
+    func fetchCategories(completion: @escaping ([Category]) -> Void) {
         guard let url = URL(string: "\(baseURL)/categories") else {
             return
         }
@@ -54,7 +54,7 @@ class HomeViewModel {
         }.resume()
     }
     
-    private func fetchPlaces(for categoryID: String, userLocation: CLLocationCoordinate2D) {
+    func fetchPlaces(for categoryID: String, userLocation: CLLocationCoordinate2D) {
         guard let url = URL(string: "\(baseURL)/markets/category/\(categoryID)") else {
             return
         }

@@ -27,6 +27,7 @@
 		56D6EBCD2D0E080800CEB750 /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6EBCC2D0E080800CEB750 /* PlaceModel.swift */; };
 		56D6EBCF2D0E24A000CEB750 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6EBCE2D0E24A000CEB750 /* Category.swift */; };
 		56D6EBD22D0E24D000CEB750 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6EBD12D0E24D000CEB750 /* HomeViewModel.swift */; };
+		56D6EBD42D0F683E00CEB750 /* PlaceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6EBD32D0F683E00CEB750 /* PlaceAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		56D6EBCC2D0E080800CEB750 /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
 		56D6EBCE2D0E24A000CEB750 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		56D6EBD12D0E24D000CEB750 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		56D6EBD32D0F683E00CEB750 /* PlaceAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +211,7 @@
 			children = (
 				56D6EBCC2D0E080800CEB750 /* PlaceModel.swift */,
 				56D6EBCE2D0E24A000CEB750 /* Category.swift */,
+				56D6EBD32D0F683E00CEB750 /* PlaceAnnotation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				56D6EBB62D094DA600CEB750 /* TipsView.swift in Sources */,
 				56D6EBCF2D0E24A000CEB750 /* Category.swift in Sources */,
 				56D6EBAC2D0930B400CEB750 /* SplashViewController.swift in Sources */,
+				56D6EBD42D0F683E00CEB750 /* PlaceAnnotation.swift in Sources */,
 				56D6EBC02D0A16CE00CEB750 /* SplashFlowDelegate.swift in Sources */,
 				56D6EBC22D0A248500CEB750 /* Typography.swift in Sources */,
 				56D6EBAE2D09310900CEB750 /* SplashView.swift in Sources */,
