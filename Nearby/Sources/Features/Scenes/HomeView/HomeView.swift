@@ -65,6 +65,7 @@ class HomeView: UIView {
     
     private let placesTableView: UITableView = {
         let tableView = UITableView()
+        tableView.separatorStyle = .none
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.register(PlaceTableViewCell.self, forCellReuseIdentifier: PlaceTableViewCell.identifier)
         return tableView

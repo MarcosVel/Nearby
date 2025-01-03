@@ -22,7 +22,8 @@ class PlaceTableViewCell: UITableViewCell {
     
     let titleLabel: UILabel = {
         let label = UILabel()
-        label.font = Typography.textSM
+        label.font = Typography.titleSM
+        label.textColor = Colors.gray600
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -55,7 +56,7 @@ class PlaceTableViewCell: UITableViewCell {
     
     let containerView: UIView = {
         let view = UIView()
-        view.layer.cornerRadius = 8
+        view.layer.cornerRadius = 12
         view.layer.borderWidth = 1
         view.layer.borderColor = Colors.gray200.cgColor
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -84,10 +85,10 @@ class PlaceTableViewCell: UITableViewCell {
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            containerView.topAnchor.constraint(equalTo: topAnchor, constant: 8),
+            containerView.topAnchor.constraint(equalTo: topAnchor, constant: 6),
             containerView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24),
             containerView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -24),
-            containerView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8),
+            containerView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -6),
             
             itemImageView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 8),
             itemImageView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 8),
@@ -106,8 +107,8 @@ class PlaceTableViewCell: UITableViewCell {
             
             ticketIcon.leadingAnchor.constraint(equalTo: itemImageView.trailingAnchor, constant: 16),
             ticketIcon.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -8),
-            ticketIcon.widthAnchor.constraint(equalToConstant: 13),
-            ticketIcon.heightAnchor.constraint(equalToConstant: 11),
+            ticketIcon.widthAnchor.constraint(equalToConstant: 16),
+            ticketIcon.heightAnchor.constraint(equalToConstant: 16),
             
             ticketLabel.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 8),
             ticketLabel.centerYAnchor.constraint(equalTo: ticketIcon.centerYAnchor),
