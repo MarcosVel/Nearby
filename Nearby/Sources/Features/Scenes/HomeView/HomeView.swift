@@ -166,6 +166,10 @@ class HomeView: UIView {
             let button = createFilterButton(title: category.name, iconName: iconName)
             button.tag = index
             button.addTarget(self, action: #selector(filterButtonTapped(_:)), for: .touchUpInside)
+            if category.name == "Alimentação" {
+                updateButtonSelection(button: button)
+            }
+            
             filterStackView.addArrangedSubview(button)
         }
     }
