@@ -38,15 +38,15 @@ class DetailsViewController: UIViewController {
     
     private let descriptionLabel: UILabel = {
         let label = UILabel()
-        label.font = Typography.textSM
-        label.textColor = .darkGray
+        label.font = Typography.textMD
+        label.textColor = Colors.gray500
         label.numberOfLines = 0
         return label
     }()
     
     private let infoTitleLabel: UILabel = {
         let label = UILabel()
-        label.font = Typography.textMD
+        label.font = Typography.subtitle
         label.textColor = Colors.gray500
         label.text = "Informações"
         label.numberOfLines = 0
@@ -55,7 +55,7 @@ class DetailsViewController: UIViewController {
     
     private let regulationTitleLabel: UILabel = {
         let label = UILabel()
-        label.font = Typography.titleMD
+        label.font = Typography.subtitle
         label.textColor = Colors.gray500
         label.text = "Regulamento"
         return label
@@ -73,8 +73,8 @@ class DetailsViewController: UIViewController {
     
     private let regulationLabel: UILabel = {
         let label = UILabel()
-        label.font = Typography.titleSM
-        label.textColor = .darkGray
+        label.font = Typography.textSM
+        label.textColor = Colors.gray500
         label.numberOfLines = 0
         return label
     }()
@@ -94,6 +94,10 @@ class DetailsViewController: UIViewController {
         stackView.spacing = 4
         stackView.alignment = .center
         stackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        // Add padding
+        stackView.isLayoutMarginsRelativeArrangement = true
+        stackView.layoutMargins = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
         
         return stackView
     }()
@@ -153,6 +157,7 @@ class DetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        configureDetails()
         setupBackButton()
         self.navigationController?.navigationBar.isHidden = true
     }
@@ -165,11 +170,11 @@ class DetailsViewController: UIViewController {
         
         containerView.addSubview(titleLabel)
         containerView.addSubview(descriptionLabel)
-        containerView.addSubview(infoTitleLabel)
-        containerView.addSubview(infoStackView)
-        containerView.addSubview(divider)
         containerView.addSubview(regulationTitleLabel)
         containerView.addSubview(regulationLabel)
+        containerView.addSubview(divider)
+        containerView.addSubview(infoTitleLabel)
+        containerView.addSubview(infoStackView)
         containerView.addSubview(divider2)
         containerView.addSubview(couponTitleLabel)
         containerView.addSubview(couponStackView)
@@ -220,7 +225,6 @@ class DetailsViewController: UIViewController {
             coverImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             
             containerView.topAnchor.constraint(equalTo: coverImageView.bottomAnchor, constant: -20),
-            containerView.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.4),
             containerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             containerView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
@@ -229,20 +233,20 @@ class DetailsViewController: UIViewController {
             
             descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 12),
             
-            infoTitleLabel.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 24),
-            infoTitleLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 24),
-            
-            infoStackView.topAnchor.constraint(equalTo: infoTitleLabel.bottomAnchor, constant: 12),
-            
-            divider.topAnchor.constraint(equalTo: infoStackView.bottomAnchor, constant: 16),
-            divider.heightAnchor.constraint(equalToConstant: 1),
-            
-            regulationTitleLabel.topAnchor.constraint(equalTo: divider.topAnchor, constant: 16),
+            regulationTitleLabel.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 24),
             regulationTitleLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 24),
             
             regulationLabel.topAnchor.constraint(equalTo: regulationTitleLabel.bottomAnchor, constant: 12),
             
-            divider2.topAnchor.constraint(equalTo: regulationLabel.bottomAnchor, constant: 16),
+            divider.topAnchor.constraint(equalTo: regulationLabel.bottomAnchor, constant: 16),
+            divider.heightAnchor.constraint(equalToConstant: 1),
+            
+            infoTitleLabel.topAnchor.constraint(equalTo: divider.topAnchor, constant: 16),
+            infoTitleLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 24),
+            
+            infoStackView.topAnchor.constraint(equalTo: infoTitleLabel.bottomAnchor, constant: 12),
+            
+            divider2.topAnchor.constraint(equalTo: infoStackView.bottomAnchor, constant: 16),
             divider2.heightAnchor.constraint(equalToConstant: 1),
             
             couponTitleLabel.topAnchor.constraint(equalTo: divider2.topAnchor, constant: 16),
@@ -256,6 +260,7 @@ class DetailsViewController: UIViewController {
 
         ])
         
+        applyLateralConstraints(to: titleLabel)
         applyLateralConstraints(to: descriptionLabel)
         applyLateralConstraints(to: infoStackView)
         applyLateralConstraints(to: divider)
@@ -311,7 +316,7 @@ class DetailsViewController: UIViewController {
                         self.coverImageView.image = image
                     }
                 }
-            }
+            }.resume()
         }
     }
     
