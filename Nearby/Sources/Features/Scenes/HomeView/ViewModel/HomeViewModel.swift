@@ -13,6 +13,7 @@ class HomeViewModel {
     var userLatitude = -23.561187293883442
     var userLongitude = -46.656451388116494
     var places: [Place] = []
+    var categories: [Category] = []
     var filteredPlaces: [Place] = []
     
     var didUpdateCategories: (() -> Void)?
@@ -20,6 +21,7 @@ class HomeViewModel {
     
     func fetchInitialData(completion: @escaping ([Category]) -> Void) {
         fetchCategories { categories in
+            completion(categories)
             if let foodCategory = categories.first(where: { $0.name == "Alimentação" }) {
                 self.fetchPlaces(for: foodCategory.id, userLocation: CLLocationCoordinate2D(latitude: self.userLatitude, longitude: self.userLongitude))
             }
