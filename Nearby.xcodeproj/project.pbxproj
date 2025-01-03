@@ -28,6 +28,7 @@
 		56D6EBCF2D0E24A000CEB750 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6EBCE2D0E24A000CEB750 /* Category.swift */; };
 		56D6EBD22D0E24D000CEB750 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6EBD12D0E24D000CEB750 /* HomeViewModel.swift */; };
 		56D6EBD42D0F683E00CEB750 /* PlaceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6EBD32D0F683E00CEB750 /* PlaceAnnotation.swift */; };
+		56D6EBD72D279E2100CEB750 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6EBD62D279E2100CEB750 /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		56D6EBCE2D0E24A000CEB750 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		56D6EBD12D0E24D000CEB750 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		56D6EBD32D0F683E00CEB750 /* PlaceAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotation.swift; sourceTree = "<group>"; };
+		56D6EBD62D279E2100CEB750 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 		56D6EBA92D09309000CEB750 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				56D6EBD52D279E0D00CEB750 /* Detail */,
 				56D6EBC32D0A3AF700CEB750 /* HomeView */,
 				56D6EBB72D0956F300CEB750 /* WelcomeView */,
 				56D6EBAA2D09309D00CEB750 /* Splash */,
@@ -222,6 +225,14 @@
 				56D6EBD12D0E24D000CEB750 /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		56D6EBD52D279E0D00CEB750 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				56D6EBD62D279E2100CEB750 /* DetailsViewController.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,6 +324,7 @@
 				56D6EBC22D0A248500CEB750 /* Typography.swift in Sources */,
 				56D6EBAE2D09310900CEB750 /* SplashView.swift in Sources */,
 				56D6EBCA2D0A3B8B00CEB750 /* PlaceTableViewCell.swift in Sources */,
+				56D6EBD72D279E2100CEB750 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
