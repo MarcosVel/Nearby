@@ -29,6 +29,7 @@
 		56D6EBD22D0E24D000CEB750 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6EBD12D0E24D000CEB750 /* HomeViewModel.swift */; };
 		56D6EBD42D0F683E00CEB750 /* PlaceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6EBD32D0F683E00CEB750 /* PlaceAnnotation.swift */; };
 		56D6EBD72D279E2100CEB750 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6EBD62D279E2100CEB750 /* DetailsViewController.swift */; };
+		56D6EBD92D286EF200CEB750 /* WelcomeFlowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6EBD82D286EF200CEB750 /* WelcomeFlowDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		56D6EBD12D0E24D000CEB750 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		56D6EBD32D0F683E00CEB750 /* PlaceAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotation.swift; sourceTree = "<group>"; };
 		56D6EBD62D279E2100CEB750 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		56D6EBD82D286EF200CEB750 /* WelcomeFlowDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeFlowDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 			children = (
 				56D6EBB82D09570D00CEB750 /* WelcomeView.swift */,
 				56D6EBBA2D095C3200CEB750 /* WelcomeViewController.swift */,
+				56D6EBD82D286EF200CEB750 /* WelcomeFlowDelegate.swift */,
 			);
 			path = WelcomeView;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				56D6EBD22D0E24D000CEB750 /* HomeViewModel.swift in Sources */,
 				56D6EBCD2D0E080800CEB750 /* PlaceModel.swift in Sources */,
 				56D6EB8C2D08EA4600CEB750 /* AppDelegate.swift in Sources */,
+				56D6EBD92D286EF200CEB750 /* WelcomeFlowDelegate.swift in Sources */,
 				56D6EBC52D0A3B1D00CEB750 /* HomeView.swift in Sources */,
 				56D6EBA82D0922C200CEB750 /* NearbyFlowController.swift in Sources */,
 				56D6EBA52D09222B00CEB750 /* Colors.swift in Sources */,
