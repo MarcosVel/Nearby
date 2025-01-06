@@ -14,6 +14,9 @@ Run the backend:
     
 ## Screenshots
 
+
+<img src="https://github.com/user-attachments/assets/21d46d26-ec7b-4288-bd85-619e63de41b5" alt="Splash Screen" style="width: 360px">
+
 <img src="https://github.com/user-attachments/assets/7162db36-d7f5-4486-af75-f24984328d3f" alt="Welcome" style="width: 360px">
 
 <img src="https://github.com/user-attachments/assets/7ef5c8c2-5c2a-406d-832d-5675c33322bd" alt="Map" style="width: 360px">
